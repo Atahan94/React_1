@@ -1,0 +1,16 @@
+button
+{
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border-style: none;
+    background-color: rgb(247, 153, 64);
+    margin: 15px 15px;
+    border-radius: 10px;
+}
+
+button :hover
+{
+    background-color: orangered;
+    transition: all 1s ease-in;
+}
