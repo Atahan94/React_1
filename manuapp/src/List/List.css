@@ -1,12 +1,16 @@
-ul
+.list  
 {
-grid-template-columns: min-content;
+   width: 540px;
+   margin: auto auto auto auto;
+   display: grid;
+   grid-template-columns: 180px 180px 180px ;
 }
-ul li
+
+.list div
 {
-    margin: auto auto 25px 0;
-    list-style: none;
-    display: inline block;
+    margin: auto 25px 25px 25px;
+    background-color:burlywood;
+    height: 120px;
 }
 p
 {

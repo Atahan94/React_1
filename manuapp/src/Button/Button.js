@@ -4,10 +4,10 @@ const Buttons = (props) =>
 {
     return(
     <div>
-        <button onClick={() =>{props.Action(props.Filters.All)}}>All</button>
-        <button onClick={() =>{props.Action(props.Filters.Breakfast)}}>Breakfast</button>
-        <button onClick={() =>{props.Action(props.Filters.Lunch)}}>Lunch</button>
-        <button onClick={() =>{props.Action(props.Filters.Shakes)}}>Shakes</button>
+        <button onClick={() =>{props.Action("All")}}>All</button>
+        <button onClick={() =>{props.Action("Breakfast")}}>Breakfast</button>
+        <button onClick={() =>{props.Action("Lunch")}}>Lunch</button>
+        <button onClick={() =>{props.Action("Shakes")}}>Shakes</button>
     </div>
     );
 };

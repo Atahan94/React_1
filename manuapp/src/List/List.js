@@ -3,19 +3,18 @@ import "./List.css";
 const List = (props) => 
 {
     return(
-      <ul>
+      <div className="list">
          {props.List.map((el) =>
-           (<li key={el.name}>
+           (<div key={el.name}>
               <img src={el.img}/>
               <hr/>
               <p>{el.name}</p>
               <p>{el.price}</p>
               <br/>
               {el.info}
-              
-           </li>)
+           </div>)
          )}
-      </ul>
+      </div>
     );
 };
 

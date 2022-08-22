@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from "react";
-import List from './List/List';
+import List from './List/List.js';
 import Buttons from './Button/Button';
 
 function App() {
@@ -69,21 +69,15 @@ function App() {
       type:"Lunch"
     },
   ];
-  const listOfFilters ={
-    All: (el) => el.type =="Shakes"|| "Lunch" || "Breakfast",
-    Breakfast: (el) => el.type =="Breakfast",
-    Lunch: (el) => el.type =="Lunch",
-    Shakes: (el) => el.type =="Shakes"
-  };
   const [list, setList] = useState(listOfFoods);
-  const ApplyFilter = (action) =>
+  const ApplyFilter = (filter) =>
   {
-     setList(listOfFoods.filter((el) => action(el)));
+      setList(filter == "All"?listOfFoods : listOfFoods.filter((el) => el.type == filter));
   };
   return (
     <div className="App">
       <h1>ManuApp</h1>
-      <Buttons Action={ApplyFilter} Filters={listOfFilters}/>
+      <Buttons Action={ApplyFilter}/>
       <List List={list}/>
     </div>
   );
